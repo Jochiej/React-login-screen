@@ -1,13 +1,12 @@
 import React, {useState} from "react";
-import { Logincomp } from "./components/login";
+import { Login } from "./components/login";
 import "./App.css";
 
-function App() {
-  const [ud, setud] = useState({username:"", password: ""})
+export const App = () => {
+  const [userInfo, setUserInfo] = useState({  username: "", password: ""  });;
   return (
     <div className="container">
-      <Logincomp ud={ud} />
+      <Login userinfo={userInfo} setUserInfo={setUserInfo} />
     </div>
   );
-}
-export default App;
+};
